@@ -1,0 +1,180 @@
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+  font-family: "Courier New", Courier, monospace;
+  transition: 0.5s;
+}
+
+header {
+  display: flex;
+
+  text-align: center;
+  align-items: center;
+  background-color: black;
+  height: 100px;
+  width: 100%;
+}
+.toolbar {
+  display: flex;
+  width: 80%;
+}
+.toolbar a {
+  font-size: 48px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.toolbar a::before,
+.toolbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+
+.toolbar a::before {
+  left: 50%;
+}
+
+.toolbar a::after {
+  right: 50%;
+}
+
+.toolbar a:hover::before,
+.toolbar a:hover::after {
+  width: 50%;
+}
+
+/* index */
+.index_up_panel {
+  width: 100%;
+  display: flex;
+  background-color: black;
+  min-height: 200px;
+  text-align: center;
+  align-items: center;
+  padding-top: 50px;
+}
+.up_image_first {
+  width: 300px;
+}
+.index_up_panel p {
+  color: #fff;
+  font-size: 48px;
+  font-weight: bold;
+}
+.hello_block {
+  width: 65%;
+  margin-top: 70px;
+  text-align: center;
+}
+.hello_block_title {
+  font-size: 48px;
+  font-weight: bold;
+}
+.hello_block_text {
+  text-align: left;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 25px;
+  max-width: 1100px;
+}
+.hello_block img {
+  margin-top: 25px;
+  border-radius: 10px;
+}
+.about_me_block {
+  width: 100%;
+  background-color: black;
+  min-height: 100px;
+  margin-top: 100px;
+  text-align: center;
+}
+.about_me_title {
+  padding-top: 20px;
+  font-size: 64px;
+  color: #fff;
+}
+.about_me_text {
+  font-size: 32px;
+  color: #fff;
+  margin-top: 50px;
+  max-width: 1600px;
+  padding-bottom: 100px;
+}
+.index_team_block {
+  width: 100%;
+  margin-top: 100px;
+  text-align: center;
+}
+.index_team_title {
+  font-size: 64px;
+}
+.index_admin_text {
+  font-size: 48px;
+  margin-top: 50px;
+}
+.team_carts {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  max-width: 80%;
+  gap: 10%;
+}
+.team_cart_block {
+  width: 300px;
+  height: 400px;
+  margin-top: 50px;
+}
+.team_cart_block img {
+  border-radius: 10px;
+  width: 300px;
+}
+.team_cart_block p {
+  margin-top: 25px;
+  font-size: 32px;
+}
+.index_team_handlers {
+  width: 100%;
+  background-color: black;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.index_handlers_text {
+  font-size: 48px;
+  padding-top: 50px;
+  color: #fff;
+}
+.team_cart_name {
+  margin-top: 25px;
+  font-size: 32px;
+  color: #fff;
+}
+.motivation_index_block {
+  text-align: center;
+  margin-top: 100px;
+  width: 100%;
+}
+.motivation_index_block p {
+  font-size: 64px;
+}
+.motivation_index_block button {
+  margin-top: 100px;
+  margin-bottom: 200px;
+  background-color: black;
+  width: 80%;
+  border-radius: 10px;
+  font-size: 64px;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid black;
+}
+.motivation_index_block button:hover {
+  color: black;
+  background-color: #fff;
+}
