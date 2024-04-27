@@ -178,3 +178,13 @@ header {
   color: black;
   background-color: #fff;
 }
+
+/* news */
+.content_reviews {
+  width: 70%;
+  text-align: center;
+  margin-top: 50px;
+}
+.content_title {
+  font-size: 64px;
+}
