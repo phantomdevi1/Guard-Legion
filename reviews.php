@@ -12,9 +12,9 @@
     <img src="img/up_image1.svg" alt="" height="80px">
     <div class="toolbar">
         <a href="index.html">Главная</a>
-        <a href="">Новости</a>
-        <a href="">Услуги</a>
-        <a href="">Контакты</a>
+        <a href="news.php">Новости</a>
+        <a href="services.php">Услуги</a>
+        <a href="contacts.php">Контакты</a>
         <a href="reviews.php">Отзывы</a>
     </div>
     <img src="img/up_image2.svg" alt="" height="80px">
