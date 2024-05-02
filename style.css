@@ -188,3 +188,58 @@ header {
 .content_title {
   font-size: 64px;
 }
+
+/* reviews */
+.statistick_reviews_block {
+  display: flex;
+  margin-top: 50px;
+  max-width: 600px;
+}
+.quantity_statistick {
+  font-size: 64px;
+  font-weight: 600;
+}
+.text_statictick {
+  font-size: 20px;
+  font-weight: 600;
+}
+.reviews_slider {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  margin-top: 50px;
+  margin-bottom: 200px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px; /* Ширина кнопок */
+  height: 40px; /* Высота кнопок */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.prev {
+  left: 0;
+  border-radius: 50% 0 0 50%;
+}
+
+.next {
+  right: 0;
+  border-radius: 0 50% 50% 0;
+}
+
+.slide {
+  display: none;
+}
+
+.slide:first-child {
+  display: block;
+}
