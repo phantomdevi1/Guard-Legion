@@ -34,21 +34,21 @@
     </div>
     <div class="reviews_slider">
         <?php
-      include 'config.php';
+            include 'config.php';
 
-        // Запрос к базе данных для получения изображений отзывов
-        $sql = "SELECT photo_path FROM reviews";
-        $result = $conn->query($sql);
+            // Запрос к базе данных для получения изображений отзывов
+            $sql = "SELECT photo_path FROM reviews";
+            $result = $conn->query($sql);
 
-        // Вывод изображений в слайдере
-        if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
-                echo '<img src="' . $row['photo_path'] . '" alt="Отзыв" class="slide" />';
+            // Вывод изображений в слайдере
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    echo '<img src="' . $row['photo_path'] . '" alt="Отзыв" class="slide" />';
+                }
+            } else {
+                echo "0 результатов";
             }
-        } else {
-            echo "0 результатов";
-        }
-        $conn->close();
+            $conn->close();
         ?>
         <button class="prev">&#10094;</button>
         <button class="next">&#10095;</button>

@@ -38,7 +38,9 @@
           echo '<p class="title_service_block">' . $row["title"] . '</p>';
           echo '<hr class="service-block-hr">';
           echo '<p class="description_service_block">' . $row["description"] . '</p>';
-          echo '<button class="take_service-btn" id="' . $row["service_id"] . '" onclick="window.location.href = \'choose_service.php?id=' . $row["service_id"] . '\';">Выбрать</button>';
+          echo '<button class="take_service-btn" id="' . $row["service_id"]
+           . '" onclick="window.location.href =
+           \'choose_service.php?id=' . $row["service_id"] . '\';">Выбрать</button>';
           echo '</div>';
           echo '</div>';
       }
