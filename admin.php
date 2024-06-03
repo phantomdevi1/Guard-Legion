@@ -1,3 +1,12 @@
+<?php
+session_start();
+// Проверка авторизации
+if (!isset($_SESSION['login'])) {
+    header("Location: index.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
