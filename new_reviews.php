@@ -17,7 +17,7 @@
 
 <div class="admin_toolbar">
     <a class="admin_toolbar-btn" href="new_service.php">Добавить услугу</a>
-    <a class="admin_toolbar-btn" href="new_reviews.php">Добавить отзыва</a>
+    <a class="admin_toolbar-btn" href="new_reviews.php">Добавить отзыв</a>
     <a class="admin_toolbar-btn" href="new_news.php">Добавить новость</a>
     <a class="admin_toolbar-btn" href="view_services.php">Посмотреть запись на тренировки</a>
     <a class="admin_toolbar-btn" href="view_callback.php">Посмотреть заявки на звонок</a>
