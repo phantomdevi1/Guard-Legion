@@ -11,12 +11,12 @@
 <header>
     <img src="img/up_image1.svg" alt="" height="80px">
     <div class="toolbar">
-        <a href="index.html">Главная</a>
+        <a href="index.php">Главная</a>
         <a href="news.php">Новости</a>
         <a href="services.php">Услуги</a>
         <a href="contacts.php">Контакты</a>
         <a href="reviews.php">Отзывы</a>
-    </div>
+      </div>
     <img src="img/up_image2.svg" alt="" height="80px">
 </header>
 <div class="news_content">
