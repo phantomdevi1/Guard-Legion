@@ -1,7 +1,16 @@
 <?php
 session_start();
+
 // Проверка авторизации
 if (!isset($_SESSION['login'])) {
+    header("Location: index.php");
+    exit;
+}
+
+// Выход из учетной записи
+if (isset($_GET['logout'])) {
+    session_unset();
+    session_destroy();
     header("Location: index.php");
     exit;
 }
@@ -29,7 +38,7 @@ if (!isset($_SESSION['login'])) {
     <a class="admin_toolbar-btn" href="new_news.php">Добавить новость</a>
     <a class="admin_toolbar-btn" href="view_services.php">Посмотреть запись на тренировки</a>
     <a class="admin_toolbar-btn" href="view_callback.php">Посмотреть заявки на звонок</a>
-    <a class="admin_exit" href="index.php">Выйти</a>
+    <a class="admin_exit" href="?logout">Выйти</a>
 </div>
 
 </body>
