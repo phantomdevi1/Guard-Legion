@@ -37,7 +37,7 @@ CREATE TABLE `Appointments` (
   `dog_name` varchar(100) DEFAULT NULL,
   `phone_number` varchar(20) DEFAULT NULL,
   `social_media_link` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -51,7 +51,7 @@ CREATE TABLE `ContactRequests` (
   `phone_number` varchar(20) DEFAULT NULL,
   `social_media_link` varchar(255) DEFAULT NULL,
   `date_request` DATE NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -64,7 +64,7 @@ CREATE TABLE `NewsEvents` (
   `date` date DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   `content` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Дамп данных таблицы `NewsEvents`
@@ -86,7 +86,7 @@ INSERT INTO `NewsEvents` (`news_id`, `date`, `title`, `content`) VALUES
 CREATE TABLE `reviews` (
   `id` int NOT NULL,
   `photo_path` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Дамп данных таблицы `reviews`
@@ -110,7 +110,7 @@ CREATE TABLE `Services` (
   `photo_path` varchar(255) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   `description` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Дамп данных таблицы `Services`
