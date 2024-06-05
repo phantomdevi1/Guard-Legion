@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 22 2024 г., 12:51
+-- Время создания: Июн 05 2024 г., 11:40
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.1.9
 
@@ -37,7 +37,14 @@ CREATE TABLE `Appointments` (
   `dog_name` varchar(100) DEFAULT NULL,
   `phone_number` varchar(20) DEFAULT NULL,
   `social_media_link` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Дамп данных таблицы `Appointments`
+--
+
+INSERT INTO `Appointments` (`appointment_id`, `service_id`, `full_name`, `dog_breed`, `dog_age`, `special_instructions`, `dog_name`, `phone_number`, `social_media_link`) VALUES
+(1, 2, 'Груздев Илья Денисович', 'сиба-ину', 2, '', 'Шварц', '89341237625', 'https://vk.com/ilya.ilia');
 
 -- --------------------------------------------------------
 
@@ -50,8 +57,15 @@ CREATE TABLE `ContactRequests` (
   `name` varchar(255) DEFAULT NULL,
   `phone_number` varchar(20) DEFAULT NULL,
   `social_media_link` varchar(255) DEFAULT NULL,
-  `date_request` DATE NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+  `date_requests` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Дамп данных таблицы `ContactRequests`
+--
+
+INSERT INTO `ContactRequests` (`request_id`, `name`, `phone_number`, `social_media_link`, `date_requests`) VALUES
+(1, 'Илья', '89341237625', 'https://vk.com/ilya.ilia', '2024-05-22');
 
 -- --------------------------------------------------------
 
@@ -64,7 +78,7 @@ CREATE TABLE `NewsEvents` (
   `date` date DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   `content` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Дамп данных таблицы `NewsEvents`
@@ -86,7 +100,7 @@ INSERT INTO `NewsEvents` (`news_id`, `date`, `title`, `content`) VALUES
 CREATE TABLE `reviews` (
   `id` int NOT NULL,
   `photo_path` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Дамп данных таблицы `reviews`
@@ -110,7 +124,7 @@ CREATE TABLE `Services` (
   `photo_path` varchar(255) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   `description` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Дамп данных таблицы `Services`
@@ -125,6 +139,25 @@ INSERT INTO `Services` (`service_id`, `photo_path`, `title`, `description`) VALU
 (6, 'img/services/services6.png', 'Гром и Молния', 'Экстремальный курс для энергичных и активных собак, включающий элементы трюков, спорта и активного послушания.'),
 (7, 'img/services/services7.png', 'Инстинкт Победы', 'Специализированная программа для соревновательных собак, фокусирующаяся на улучшении навыков и подготовке к выставкам и турнирам.'),
 (8, 'img/services/services8.png', 'Территория Альфа', 'Комплексный курс для юных собак, направленный на раннее развитие лидерских качеств и социальной адаптации в стае.');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE `users` (
+  `id` int NOT NULL,
+  `login` varchar(55) NOT NULL,
+  `password` varchar(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `login`, `password`) VALUES
+(1, 'admin', 'admin');
 
 --
 -- Индексы сохранённых таблиц
@@ -162,6 +195,12 @@ ALTER TABLE `Services`
   ADD PRIMARY KEY (`service_id`);
 
 --
+-- Индексы таблицы `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -169,19 +208,19 @@ ALTER TABLE `Services`
 -- AUTO_INCREMENT для таблицы `Appointments`
 --
 ALTER TABLE `Appointments`
-  MODIFY `appointment_id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `appointment_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `ContactRequests`
 --
 ALTER TABLE `ContactRequests`
-  MODIFY `request_id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `request_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `NewsEvents`
 --
 ALTER TABLE `NewsEvents`
-  MODIFY `news_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `news_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `reviews`
@@ -193,7 +232,13 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT для таблицы `Services`
 --
 ALTER TABLE `Services`
-  MODIFY `service_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `service_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT для таблицы `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
