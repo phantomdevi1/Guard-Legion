@@ -67,10 +67,10 @@ function getServiceData($conn, $service_id) {
     <table class="admin_table">
         <tr>
             <th>Имя владельца</th>
-            <th>Порода собаки</th>
-            <th>Возраст собаки</th>
-            <th>Выбранный курс</th>
-            <th>Дополнительная информация</th>            
+            <th class="th_fifteen_none">Порода собаки</th>
+            <th class="th_sixteen_none">Возраст собаки</th>
+            <th class="th_eight_none">Выбранный курс</th>
+            <th class="th_eight_none">Дополнительная информация</th>            
             <th>Номер телефона</th>
             <th>Ссылка на соц. сеть</th>
         </tr>
@@ -81,10 +81,10 @@ function getServiceData($conn, $service_id) {
                 $service_data = getServiceData($conn, $row["service_id"]);
                 echo "<tr>";
                 echo "<td>" . $row["full_name"] . "</td>";
-                echo "<td>" . $row["dog_breed"] . "</td>";
-                echo "<td>" . $row["dog_age"] . "</td>";
-                echo "<td>" . $service_data["title"] . "</td>";
-                echo "<td>" . $row["special_instructions"] . "</td>";
+                echo "<td class='th_fifteen_none'>" . $row["dog_breed"] . "</td>";
+                echo "<td class='th_sixteen_none'>" . $row["dog_age"] . "</td>";
+                echo "<td class='th_eight_none'>" . $service_data["title"] . "</td>";
+                echo "<td class='th_eight_none'>" . $row["special_instructions"] . "</td>";
                 echo "<td>" . $row["phone_number"] . "</td>";
                 echo "<td><a href='" . $row["social_media_link"] . "' target='_blank'>" . "Ссылка" . "</a></td>";
                 echo "</tr>";

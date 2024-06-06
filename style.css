@@ -618,6 +618,7 @@ gap: 15px;
   border-collapse: collapse;
   margin-top: 20px;
   text-align: center;
+  margin-bottom: 100px;
 }
 .admin_table th {
   background-color: #f2f2f2;
@@ -723,7 +724,9 @@ gap: 15px;
   .hello_block_text{
     text-align: center;
   }
-
+  .admin_toolbar{
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -732,6 +735,12 @@ gap: 15px;
   }
   .content_reviews{
     width: 90%;
+  }
+  .date_new_news{
+    width: 60%;
+  }
+  .admin_content{
+    width: 95%;
   }
 }
 
@@ -811,6 +820,21 @@ gap: 15px;
   .reviews_slider img{
     width: 98%;
   }
+  .choose_service_form{
+    width: 100%;
+  }
+  .modal-content{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0px 10px 0px;
+  }
+  .new_services_form{
+    width: 100%;
+  }
+  .th_eight_none{
+    display: none;
+  }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -844,6 +868,15 @@ gap: 15px;
     height: 25px;
     font-size: 15px;
   }
+  .admin_toolbar-btn{
+    font-size: 18px;
+  }
+  .admin_content {
+    width: 90%;
+  }
+  .th_sixteen_none{
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -853,11 +886,31 @@ gap: 15px;
   .news_title{
     font-size: 20px;
   }
+  .content_services{
+    width: 95%;
+  }
+  .admin_toolbar{
+    width: 95%;
+  }
+  .th_fifteen_none{
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 400px) {
   .service_block{
     width: 95%;
+  }
+  .content_services input{
+    font-size: 14px;
+    width: 90%;
+  }
+  .admin_toolbar-btn{
+    width: 90%;
+    text-align: center;
+  }
+  header p{
+    font-size: 30px;
   }
 
 }
@@ -891,6 +944,9 @@ gap: 15px;
   }
   .content_services{
     width: 95%;
+  }
+  .admin_content h2{
+    text-align: center;
   }
 }
 
