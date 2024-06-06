@@ -690,7 +690,17 @@ gap: 15px;
 }
 
 
-/* index */
+@media only screen and (max-width: 1850px) {
+  .callback_form{
+    width: 100%;
+  }
+  .callback_submit_btn{
+    width: 250px;
+  }
+  .reviews_slider img{
+    max-width: 80%;
+  }
+}
 @media only screen and (max-width: 1400px) {
   .toolbar{
     width: 100%;
@@ -715,6 +725,16 @@ gap: 15px;
   }
 
 }
+
+@media only screen and (max-width: 1100px) {
+  header img{
+    display: none;
+  }
+  .content_reviews{
+    width: 90%;
+  }
+}
+
 @media only screen and (max-width: 950px) {
   .hello_block_title{
     font-size: 35px;
@@ -732,6 +752,7 @@ gap: 15px;
     font-size: 30px;
     width: 50%;
   }
+
 }
 
 
@@ -757,6 +778,39 @@ gap: 15px;
     width: 80%;
     font-size: 25px;
   }
+  .callback_form p{
+    font-size: 20px;
+  }
+  .callback_submit_btn{
+    font-size: 18px;
+  }
+  .content_title{
+    font-size: 40px;
+  }
+  .phone_contacts-container p,
+  .adress_contacts-title,
+  .socseti_contacts-title{
+    font-size: 30px;
+  }
+  .phone_contacts-container a,
+  .adress_contacts-text{
+    font-size: 20px;
+  }
+  .socseti_contacts-href a img{
+    width: 100px;
+  }
+  .content_reviews{
+    width: 100%;
+  }
+  .statistick_reviews_block{
+    flex-direction: column;
+  }
+  .quantity_statistick{
+    font-size: 40px;
+  }
+  .reviews_slider img{
+    width: 98%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -769,6 +823,43 @@ gap: 15px;
   .hello_block_text{
     font-size: 18px;
   }
+  .content_title{
+    font-size: 30px;
+  }
+  .news_title{
+    font-size: 25px;
+  }
+  .news_text{
+    font-size: 20px;
+  }
+  .contacts_content{
+    width: 90%;
+  }
+  .callback_input_text{
+    font-size: 20px;
+  }
+  .prev, .next{
+    top: 30%;
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .news_content{
+    width: 95%;
+  }
+  .news_title{
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .service_block{
+    width: 95%;
+  }
+
 }
 
 @media only screen and (max-width: 370px) {
@@ -782,34 +873,25 @@ gap: 15px;
   .team_cart_block img{
     width: 90%;
   }
-}
-
-/* news */
-
-@media only screen and (max-width: 1100px) {
-  header img{
-    display: none;
+  .service_image{
+    width: 90%;
+    height: auto;
   }
-}
-
-
-@media only screen and (max-width: 600px) {
-  .content_title{
-    font-size: 30px;
+  .title_service_block{
+    margin: 0px auto;
+    margin-top: 5px;
   }
-  .news_title{
-    font-size: 25px;
+  .description_service_block{
+    margin: 0px auto;
   }
-  .news_text{
-    font-size: 20px;
+  .service_info{
+    padding: 0px;
+    padding-top: 5px;
+    width: 100%;
   }
-}
-
-@media only screen and (max-width: 500px) {
-  .news_content{
+  .content_services{
     width: 95%;
   }
-  .news_title{
-    font-size: 20px;
-  }
 }
+
+
