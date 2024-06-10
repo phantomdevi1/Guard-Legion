@@ -26,13 +26,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone_number = $_POST['phone_number'];
     $social_media_link = $_POST['social_media_link'];
 
-    $sql = "INSERT INTO Appointments (service_id, full_name, dog_breed, dog_age, special_instructions, dog_name, phone_number, social_media_link) VALUES ('$service_id', '$full_name', '$dog_breed', '$dog_age', '$special_instructions', '$dog_name', '$phone_number', '$social_media_link')";
+    $errors = [];
 
-    if ($conn->query($sql) === TRUE) {
-        echo "<script>alert('Запись успешно добавлена');</script>";
-    } else {
-        echo "<script>alert('Ошибка: " . $sql . "<br>" . $conn->error . "');</script>";
+    if (!preg_match("/^[a-zA-ZА-Яа-я\s]+$/u", $full_name)) {
+        $errors[] = "ФИО должно содержать только буквы и пробелы.";
     }
+    if (!preg_match("/^[a-zA-ZА-Яа-я\s]+$/u", $dog_breed)) {
+        $errors[] = "Порода собаки должна содержать только буквы и пробелы.";
+    }
+    if (!preg_match("/^[a-zA-ZА-Яа-я\s]+$/u", $dog_name)) {
+        $errors[] = "Имя собаки должно содержать только буквы и пробелы.";
+    }
+    if (!preg_match("/^[0-9]+$/", $phone_number)) {
+        $errors[] = "Номер телефона должен содержать только цифры.";
+    }
+
+    if (empty($errors)) {
+      $sql = "INSERT INTO Appointments (service_id, full_name, dog_breed, dog_age, special_instructions, dog_name, phone_number, social_media_link) VALUES ('$service_id', '$full_name', '$dog_breed', '$dog_age', '$special_instructions', '$dog_name', '$phone_number', '$social_media_link')";
+
+      if ($conn->query($sql) === TRUE) {
+          echo "<script>alert('Запись успешно добавлена');</script>";
+      } else {
+          echo "<script>alert('Ошибка: " . $sql . "<br>" . $conn->error . "');</script>";
+      }
+  } else {
+      foreach ($errors as $error) {
+          echo "<script>alert('$error');</script>";
+      }
+  }
 }
 
 $conn->close();
